@@ -1,0 +1,41 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+}
+
+aside.sidebar {
+  flex: 1 1 35%;
+  background-color: blue;
+  color: white;
+}
+div.non-sidebar-content {
+  flex: 1 1 65%;
+}
+
+header {
+  border-bottom: 3px solid black;
+  box-shadow: black;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-project-container {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.grid-project-item {
+  border-radius: 0.3em;
+  box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.5);
+}
+.grid-project-item {
+  background-color: yellowgreen;
+}
