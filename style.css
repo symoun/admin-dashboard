@@ -13,6 +13,9 @@ aside.sidebar {
   background-color: blue;
   color: white;
 }
+aside a {
+  color: white;
+}
 div.non-sidebar-content {
   flex: 1 1 65%;
 }
@@ -25,11 +28,20 @@ header {
   grid-template-columns: repeat(2, 1fr);
 }
 
+/*Project/Announcement/Trending Grid Layout*/
+main {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
 .grid-project-container {
   display: grid;
   grid-gap: 2em;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
+}
+.grid-project-container > span {
+  grid-area: 1/1/2/3;
 }
 
 .grid-project-item {
@@ -38,4 +50,7 @@ header {
 }
 .grid-project-item {
   background-color: yellowgreen;
+}
+
+.grid-AT-container {
 }
