@@ -3,23 +3,31 @@
   margin: 0px;
   box-sizing: border-box;
 }
+
 body {
   height: 100vh;
   display: flex;
 }
 
+/*Side Bar*/
 aside.sidebar {
-  flex: 1 1 35%;
+  flex: 1 1 auto;
+  min-width: min-content;
+  padding: 0.5em;
   background-color: blue;
   color: white;
 }
+
 aside a {
   color: white;
 }
+
 div.non-sidebar-content {
-  flex: 1 1 65%;
+  flex: 1 1 auto;
+  min-width: min-content;
 }
 
+/*Top Part*/
 header {
   border-bottom: 3px solid black;
   box-shadow: black;
@@ -32,25 +40,41 @@ header {
 main {
   display: grid;
   grid-template-columns: 70% 30%;
+  background-color: lightgray;
+  gap: 1em;
 }
 
+.grid-project-item,
+.grid-announcement,
+.grid-trending {
+  padding: 0.5em;
+  box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.5);
+  border-radius: 0.3em;
+  background-color: white;
+}
+
+/*Project*/
 .grid-project-container {
   display: grid;
   grid-gap: 2em;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 1.3em repeat(2, 1fr);
 }
-.grid-project-container > span {
-  grid-area: 1/1/2/3;
+
+.grid-project-container::before {
+  content: "Your Project";
+  grid-column: 1 / span 2;
+  padding-top: 0.8em;
+  margin-bottom: -2em;
+  font-weight: bold;
+  font-size: 1.3em;
 }
 
 .grid-project-item {
-  border-radius: 0.3em;
-  box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.5);
-}
-.grid-project-item {
-  background-color: yellowgreen;
+  min-width: 200px;
+  min-height: 200px;
 }
 
+/*Announcement and Trending*/
 .grid-AT-container {
 }
