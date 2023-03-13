@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: "roboto", cursive;
   height: 100vh;
   display: flex;
 }
@@ -78,3 +79,5 @@ main {
 /*Announcement and Trending*/
 .grid-AT-container {
 }
+
+/*link icons*/
